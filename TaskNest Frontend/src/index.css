@@ -1,0 +1,674 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  min-height: 64vh; /* Ensure the container takes at least full viewport height */
+  justify-content: space-between; /* Distribute space between header, main, and footer */
+}
+
+/* Header Styles */
+.header {
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+  background-color: #2a2a2a;
+  border-bottom: 3px solid #4a5568;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.heading {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+/* Title Container and Edit Button */
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.title-edit-button {
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.title-edit-button:hover {
+  color: #ffffff;
+  background-color: #404040;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.title-edit-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.title-edit-input {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: transparent;
+  border: 2px solid #4a5568;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  min-width: 300px;
+}
+
+.title-edit-input:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.title-edit-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.title-confirm-button,
+.title-cancel-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.title-confirm-button:hover {
+  background-color: #22c55e;
+  transform: scale(1.1);
+}
+
+.title-cancel-button:hover {
+  background-color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* Main Content */
+.main {
+  flex: 1; /* Allow main content to grow and fill available space */
+  padding: 1rem;
+  overflow: auto; /* Allow scrolling only within the main content area */
+}
+
+/* List Styles */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  margin-bottom: 0.75rem;
+}
+
+.item-box {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  gap: 1rem;
+}
+
+.item-box:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: #4a5568;
+}
+
+/* Checkbox Styles */
+.checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4a5568;
+  flex-shrink: 0;
+}
+
+/* Label Styles */
+.label {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+.label.checked {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #888888;
+}
+
+/* Item Actions Container */
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Favourite Button */
+.favourite-button {
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.favourite-button:hover {
+  background-color: #404040;
+  transform: scale(1.1);
+  color: #fbbf24;
+}
+
+.favourite-button.active {
+  color: #fbbf24;
+}
+
+.favourite-button.active:hover {
+  color: #f59e0b;
+  background-color: #404040;
+}
+
+/* Edit Button */
+.edit-button {
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.edit-button:hover {
+  background-color: #404040;
+  color: #60a5fa;
+  transform: scale(1.1);
+}
+
+/* Delete Button */
+.delete-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  color: #888888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.delete-button:hover {
+  background-color: #404040;
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}
+
+/* Item Edit Form */
+.item-edit-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.item-edit-input {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 0.5rem;
+  min-width: 0;
+}
+
+.item-edit-input:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.item-confirm-button,
+.item-cancel-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.item-confirm-button:hover {
+  background-color: #22c55e;
+  transform: scale(1.1);
+}
+
+.item-cancel-button:hover {
+  background-color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* Active Count Styles - positioned above footer, centered, grey */
+.ActiveCount {
+  color: #888888;
+  margin: 1rem 0;
+  padding: 1rem 1rem 0 1rem;
+  /*padding-bottom: 0rem;*/
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Add Item Form Styles */
+.add-item {
+  display: flex;
+  align-items: center;
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0.75rem 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  gap: 1rem;
+  flex: 0 0 76%;
+}
+
+.add-item:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: #4a5568;
+}
+
+.add-item-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.add-item-active-count {
+  color: #cccccc;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding-right: 0.9rem;
+}
+
+.add-item-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-item label {
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #888888;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  transform-origin: left;
+}
+
+.add-item label.active {
+  transform: translateY(-1.5rem) scale(0.8);
+  color: #888888;
+  background-color: #333333;
+  padding: 0 0.15rem;
+}
+
+.add-item input {
+  flex: 1;
+  /*padding: 0rem 0;*/
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.add-item input::placeholder {
+  color: transparent;
+}
+
+.add-item-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background-color: #666666;
+  color: #999999;
+  border: none;
+  border-radius: 50%;
+  cursor: not-allowed;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.add-item-button.active {
+  background-color: #ff4444;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.add-item-button.active:hover {
+  background-color: #ff5555;
+  transform: translateY(-1px) scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 68, 68, 0.3);
+}
+
+.add-item-button.active:active {
+  transform: translateY(0) scale(0.95);
+  box-shadow: 0 2px 4px rgba(255, 68, 68, 0.2);
+}
+
+.add-item-button:focus {
+  outline: 2px solid #ff4444;
+  outline-offset: 2px;
+}
+
+/* Layout wrapper for AddItem and SearchItem */
+.add-search-container {
+  display: flex;
+  gap: 1rem;
+  margin: 0.75rem 1rem;
+}
+
+/* SearchItem base box like AddItem */
+.search-item {
+  margin-top: 0.8rem;
+  flex: 0 0 20%;
+  height: 4.7rem;
+  display: flex;
+  align-items: center;
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.search-item:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: #4a5568;
+}
+
+/* Label and input styled same as AddItem */
+.search-item-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-item label {
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #888888;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  transform-origin: left;
+}
+
+.search-item label.active {
+  transform: translateY(-1.5rem) scale(0.8);
+  color: #888888;
+  background-color: #333333;
+  padding: 0 0.25rem;
+}
+
+.search-item input {
+  flex: 1;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+}
+
+.search-item input::placeholder {
+  color: transparent;
+}
+
+/* Responsive: stack AddItem and SearchItem on smaller screens */
+@media (max-width: 768px) {
+  .add-search-container {
+    flex-direction: column;
+  }
+
+  .title-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .title-edit-input {
+    font-size: 2rem;
+    min-width: 250px;
+  }
+
+  .item-box {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .item-actions {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .favourite-button,
+  .edit-button,
+  .delete-button {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+
+/* Footer Styles - Always at bottom of content */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #2d2d2d;
+  border-top: 1px solid #404040;
+}
+.footer-text {
+  margin: 0;
+  font-size: 1rem;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.empty-text {
+  font-size: 1.2rem;
+  color: #888888;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .item-box {
+    padding: 0.75rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .add-item {
+    padding: 0.75rem;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+
+  .add-item-left {
+    min-width: auto;
+    text-align: center;
+  }
+
+  .add-item-right {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .add-item-active-count {
+    font-size: 0.9rem;
+  }
+
+  .add-item input {
+    font-size: 1rem;
+  }
+
+  .add-item-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    align-self: center;
+  }
+}
+
+/* Focus Styles for Accessibility */
+.checkbox:focus,
+.delete-button:focus,
+.edit-button:focus,
+.favourite-button:focus,
+.title-edit-button:focus {
+  outline: 2px solid #4a5568;
+  outline-offset: 2px;
+}
+
+/* Smooth Animations */
+@media (prefers-reduced-motion: no-preference) {
+  .item-box,
+  .delete-button,
+  .edit-button,
+  .favourite-button,
+  .label,
+  .add-item input,
+  .add-item button {
+    transition: all 0.2s ease;
+  }
+}
