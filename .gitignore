@@ -1,105 +1,51 @@
-<<<<<<< HEAD
-# IDE files
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
+########################################
+# FRONTEND: React + Vite + WebStorm
+########################################
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Frontend (React/Node.js)
-frontend/node_modules/
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-frontend/pnpm-debug.log*
-frontend/lerna-debug.log*
-frontend/build/
-frontend/dist/
-frontend/dist-ssr/
-frontend/*.local
-frontend/.env
-frontend/.env.local
-frontend/.env.development.local
-frontend/.env.test.local
-frontend/.env.production.local
-
-# Frontend editor files
-frontend/.vscode/*
-!frontend/.vscode/extensions.json
-frontend/*.suo
-frontend/*.ntvs*
-frontend/*.njsproj
-frontend/*.sln
-frontend/*.sw?
-
-# Backend (Spring Boot/Java)
-backend/target/
-backend/build/
-backend/out/
-backend/*.jar
-backend/*.war
-backend/*.ear
-backend/hs_err_pid*
-backend/.gradle/
-backend/gradle/wrapper/gradle-wrapper.jar
-backend/.env
-backend/.env.local
-backend/application-dev.properties
-backend/application-prod.properties
-backend/application-local.properties
-backend/HELP.md
-
-# Sensitive configuration files
-backend/src/main/resources/application-local.properties
-
-# Backend IDE files
-backend/.apt_generated
-backend/.classpath
-backend/.factorypath
-backend/.project
-backend/.settings
-backend/.springBeans
-backend/.sts4-cache
-backend/*.iws
-backend/*.iml
-backend/*.ipr
-backend/nbproject/private/
-backend/nbbuild/
-backend/nbdist/
-backend/.nb-gradle/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
+# Node modules and build output
+node_modules/
+dist/
+dist-ssr/
+.vite/
 
 # Logs
 *.log
-logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Temporary files
-*.tmp
-*.temp
+# Environment files
+.env
+.env.local
+.env.*.local
 
-# Security - Never commit these!
-*.key
-*.pem
-*.p12
-*.jks
-secrets/
-config/secrets/
+# WebStorm / VS Code
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+out/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+########################################
+# BACKEND: Spring Boot + IntelliJ IDEA
+########################################
 
 # Compiled class files
 *.class
+
+# Log files
+*.log
+hs_err_pid*
+replay_pid*
 
 # Package files
 *.jar
@@ -109,16 +55,49 @@ config/secrets/
 *.zip
 *.tar.gz
 *.rar
-=======
-# IntelliJ
-.idea/
-*.iml
 
-# Build
-/target/
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 
-# Secrets
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Application Properties - Keep private
 application.properties
-application.yml
-.env
->>>>>>> dc0ebfd629541b8f17a34cf31d01240100106ccb
+src/main/resources/application.properties
+
+# Sample config files (keep)
+!application-sample.properties
+!src/main/resources/application-sample.properties
