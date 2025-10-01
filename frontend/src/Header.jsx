@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { FaEdit, FaCheck, FaTimes } from "react-icons/fa";
+import { FaEdit, FaCheck, FaTimes, FaSignOutAlt, FaUser } from "react-icons/fa";
 
-const Header = ({ title = "ToDo", isEditing, setIsEditing, onTitleEdit }) => {
+const Header = ({ title = "ToDo", isEditing, setIsEditing, onTitleEdit, username, onLogout }) => {
     const [editTitle, setEditTitle] = useState(title);
 
     const handleSubmit = (e) => {
@@ -20,37 +20,53 @@ const Header = ({ title = "ToDo", isEditing, setIsEditing, onTitleEdit }) => {
 
     return (
         <header className="header">
-            {isEditing ? (
-                <form className="title-edit-form" onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        value={editTitle}
-                        onChange={(e) => setEditTitle(e.target.value)}
-                        className="title-edit-input"
-                        autoFocus
-                        onBlur={handleSubmit}
-                    />
-                    <div className="title-edit-buttons">
-                        <button type="submit" className="title-confirm-button">
-                            <FaCheck />
-                        </button>
-                        <button type="button" onClick={handleCancel} className="title-cancel-button">
-                            <FaTimes />
+            <div className="header-content">
+                {isEditing ? (
+                    <form className="title-edit-form" onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            value={editTitle}
+                            onChange={(e) => setEditTitle(e.target.value)}
+                            className="title-edit-input"
+                            autoFocus
+                            onBlur={handleSubmit}
+                        />
+                        <div className="title-edit-buttons">
+                            <button type="submit" className="title-confirm-button">
+                                <FaCheck />
+                            </button>
+                            <button type="button" onClick={handleCancel} className="title-cancel-button">
+                                <FaTimes />
+                            </button>
+                        </div>
+                    </form>
+                ) : (
+                    <div className="title-container">
+                        <h1 className="heading">{title}</h1>
+                        <button
+                            className="title-edit-button"
+                            onClick={() => setIsEditing(true)}
+                            title="Edit title"
+                        >
+                            <FaEdit />
                         </button>
                     </div>
-                </form>
-            ) : (
-                <div className="title-container" onMouseEnter={() => {}}>
-                    <h1 className="heading">{title}</h1>
+                )}
+
+                <div className="user-info">
+                    <div className="username-display">
+                        <FaUser className="user-icon" />
+                        <span className="username-text">{username}</span>
+                    </div>
                     <button
-                        className="title-edit-button"
-                        onClick={() => setIsEditing(true)}
-                        title="Edit title"
+                        onClick={onLogout}
+                        className="logout-button"
+                        title="Logout"
                     >
-                        <FaEdit />
+                        <FaSignOutAlt /> Logout
                     </button>
                 </div>
-            )}
+            </div>
         </header>
     );
 };

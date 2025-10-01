@@ -23,17 +23,200 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #1a1a1a;
-  min-height: 64vh; /* Ensure the container takes at least full viewport height */
-  justify-content: space-between; /* Distribute space between header, main, and footer */
+  min-height: 64vh;
+  justify-content: space-between;
 }
 
-/* Header Styles */
+/* ==================== AUTHENTICATION STYLES ==================== */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  padding: 1rem;
+}
+
+.auth-box {
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.auth-subtitle {
+  font-size: 1.1rem;
+  color: #888888;
+  font-weight: 500;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.auth-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #ef4444;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.auth-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.auth-icon {
+  color: #888888;
+  font-size: 1rem;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  background-color: #1a1a1a;
+  border: 1px solid #404040;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #4a5568;
+  box-shadow: 0 0 0 2px rgba(74, 85, 104, 0.2);
+}
+
+.auth-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-input::placeholder {
+  color: #666666;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #ff4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.auth-button:hover:not(:disabled) {
+  background-color: #ff5555;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(255, 68, 68, 0.3);
+}
+
+.auth-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.auth-switch-text {
+  font-size: 0.95rem;
+  color: #888888;
+}
+
+.auth-switch-button {
+  background: none;
+  border: none;
+  color: #ff4444;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.auth-switch-button:hover:not(:disabled) {
+  color: #ff5555;
+}
+
+.auth-switch-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==================== HEADER STYLES ==================== */
+
 .header {
   padding: 2rem 1rem 1rem 1rem;
-  text-align: center;
   background-color: #2a2a2a;
   border-bottom: 3px solid #4a5568;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   position: relative;
 }
 
@@ -44,15 +227,6 @@ body {
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
-}
-
-/* Title Container and Edit Button */
-.title-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  position: relative;
 }
 
 .title-edit-button {
@@ -126,14 +300,277 @@ body {
   transform: scale(1.1);
 }
 
-/* Main Content */
-.main {
-  flex: 1; /* Allow main content to grow and fill available space */
-  padding: 1rem;
-  overflow: auto; /* Allow scrolling only within the main content area */
+/* User Info Styles */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* List Styles */
+.username-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #333333;
+  border-radius: 8px;
+  border: 1px solid #404040;
+}
+
+.user-icon {
+  color: #888888;
+  font-size: 1rem;
+}
+
+.username-text {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #404040;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #ef4444;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+.logout-button:active {
+  transform: translateY(0);
+}
+
+/* ==================== ADD & SEARCH CONTAINER ==================== */
+
+.add-search-container {
+  display: flex;
+  gap: 1rem;
+  margin: 0.75rem 1rem;
+}
+
+/* ==================== ADD ITEM STYLES ==================== */
+
+.add-item {
+  display: flex;
+  align-items: center;
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  gap: 1rem;
+  flex: 0 0 76%;
+}
+
+.add-item:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: #4a5568;
+}
+
+.add-item-left {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.add-item-active-count {
+  color: #cccccc;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding-right: 0.9rem;
+}
+
+.add-item-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-item label {
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #888888;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  transform-origin: left;
+}
+
+.add-item label.active {
+  transform: translateY(-1.5rem) scale(0.8);
+  color: #888888;
+  background-color: #333333;
+  padding: 0 0.15rem;
+}
+
+.add-item input {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.add-item input::placeholder {
+  color: transparent;
+}
+
+.add-item-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background-color: #666666;
+  color: #999999;
+  border: none;
+  border-radius: 50%;
+  cursor: not-allowed;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.add-item-button.active {
+  background-color: #ff4444;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.add-item-button.active:hover {
+  background-color: #ff5555;
+  transform: translateY(-1px) scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 68, 68, 0.3);
+}
+
+.add-item-button.active:active {
+  transform: translateY(0) scale(0.95);
+  box-shadow: 0 2px 4px rgba(255, 68, 68, 0.2);
+}
+
+.add-item-button:focus {
+  outline: 2px solid #ff4444;
+  outline-offset: 2px;
+}
+
+/* ==================== SEARCH ITEM STYLES ==================== */
+
+.search-item {
+  margin-top: 0.8rem;
+  flex: 0 0 20%;
+  height: 4.7rem;
+  display: flex;
+  align-items: center;
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.search-item:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: #4a5568;
+}
+
+.search-item-form {
+  width: 100%;
+}
+
+.search-item-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-item label {
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #888888;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  transform-origin: left;
+}
+
+.search-item label.active {
+  transform: translateY(-1.5rem) scale(0.8);
+  color: #888888;
+  background-color: #333333;
+  padding: 0 0.25rem;
+}
+
+.search-item input {
+  flex: 1;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+}
+
+.search-item input::placeholder {
+  color: transparent;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+
+.main {
+  flex: 1;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* ==================== EMPTY STATE ==================== */
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.empty-text {
+  font-size: 1.2rem;
+  color: #888888;
+  font-style: italic;
+}
+
+/* ==================== LIST STYLES ==================== */
+
 .list {
   list-style: none;
   padding: 0;
@@ -281,7 +718,8 @@ body {
   transform: scale(0.95);
 }
 
-/* Item Edit Form */
+/* ==================== ITEM EDIT STYLES ==================== */
+
 .item-edit-form {
   flex: 1;
   display: flex;
@@ -335,213 +773,49 @@ body {
   transform: scale(1.1);
 }
 
-/* Active Count Styles - positioned above footer, centered, grey */
+/* ==================== ACTIVE COUNT ==================== */
+
 .ActiveCount {
   color: #888888;
   margin: 1rem 0;
   padding: 1rem 1rem 0 1rem;
-  /*padding-bottom: 0rem;*/
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
   letter-spacing: 0.5px;
 }
 
-/* Add Item Form Styles */
-.add-item {
-  display: flex;
-  align-items: center;
-  background-color: #2d2d2d;
-  border: 1px solid #404040;
-  border-radius: 12px;
+/* ==================== FOOTER STYLES ==================== */
+
+.footer {
   padding: 1rem;
-  margin: 0.75rem 1rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  position: relative;
-  gap: 1rem;
-  flex: 0 0 76%;
+  text-align: center;
+  background-color: #2d2d2d;
+  border-top: 1px solid #404040;
 }
 
-.add-item:hover {
-  background-color: #333333;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border-color: #4a5568;
-}
-
-.add-item-left {
-  display: flex;
-  flex-direction: column;
-  min-width: 120px;
-}
-
-.add-item-active-count {
-  color: #cccccc;
+.footer-text {
+  margin: 0;
   font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.8px;
-  padding-right: 0.9rem;
-}
-
-.add-item-right {
-  flex: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.add-item label {
-  position: absolute;
-  left: 0;
-  font-size: 1.1rem;
+  color: #cccccc;
   font-weight: 500;
-  color: #888888;
-  pointer-events: none;
-  transition: all 0.2s ease;
-  transform-origin: left;
 }
 
-.add-item label.active {
-  transform: translateY(-1.5rem) scale(0.8);
-  color: #888888;
-  background-color: #333333;
-  padding: 0 0.15rem;
-}
+/* ==================== RESPONSIVE STYLES ==================== */
 
-.add-item input {
-  flex: 1;
-  /*padding: 0rem 0;*/
-  font-size: 1.1rem;
-  font-weight: 600;
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  outline: none;
-  transition: all 0.2s ease;
-}
-
-.add-item input::placeholder {
-  color: transparent;
-}
-
-.add-item-button {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  background-color: #666666;
-  color: #999999;
-  border: none;
-  border-radius: 50%;
-  cursor: not-allowed;
-  transition: all 0.2s ease;
-  opacity: 0.6;
-  flex-shrink: 0;
-}
-
-.add-item-button.active {
-  background-color: #ff4444;
-  color: #ffffff;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.add-item-button.active:hover {
-  background-color: #ff5555;
-  transform: translateY(-1px) scale(1.1);
-  box-shadow: 0 4px 8px rgba(255, 68, 68, 0.3);
-}
-
-.add-item-button.active:active {
-  transform: translateY(0) scale(0.95);
-  box-shadow: 0 2px 4px rgba(255, 68, 68, 0.2);
-}
-
-.add-item-button:focus {
-  outline: 2px solid #ff4444;
-  outline-offset: 2px;
-}
-
-/* Layout wrapper for AddItem and SearchItem */
-.add-search-container {
-  display: flex;
-  gap: 1rem;
-  margin: 0.75rem 1rem;
-}
-
-/* SearchItem base box like AddItem */
-.search-item {
-  margin-top: 0.8rem;
-  flex: 0 0 20%;
-  height: 4.7rem;
-  display: flex;
-  align-items: center;
-  background-color: #2d2d2d;
-  border: 1px solid #404040;
-  border-radius: 12px;
-  padding: 1rem;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-.search-item:hover {
-  background-color: #333333;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border-color: #4a5568;
-}
-
-/* Label and input styled same as AddItem */
-.search-item-right {
-  flex: 1;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.search-item label {
-  position: absolute;
-  left: 0;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #888888;
-  pointer-events: none;
-  transition: all 0.2s ease;
-  transform-origin: left;
-}
-
-.search-item label.active {
-  transform: translateY(-1.5rem) scale(0.8);
-  color: #888888;
-  background-color: #333333;
-  padding: 0 0.25rem;
-}
-
-.search-item input {
-  flex: 1;
-  padding: 0.5rem 0;
-  font-size: 1.1rem;
-  font-weight: 500;
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  outline: none;
-}
-
-.search-item input::placeholder {
-  color: transparent;
-}
-
-/* Responsive: stack AddItem and SearchItem on smaller screens */
 @media (max-width: 768px) {
   .add-search-container {
     flex-direction: column;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-info {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .title-container {
@@ -554,9 +828,22 @@ body {
     min-width: 250px;
   }
 
+  .container {
+    max-width: 100%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
   .item-box {
+    padding: 0.75rem;
     flex-wrap: wrap;
     gap: 0.75rem;
+  }
+
+  .label {
+    font-size: 1rem;
   }
 
   .item-actions {
@@ -569,51 +856,6 @@ body {
   .delete-button {
     width: 32px;
     height: 32px;
-    font-size: 1rem;
-  }
-}
-
-/* Footer Styles - Always at bottom of content */
-.footer {
-  padding: 1rem;
-  text-align: center;
-  background-color: #2d2d2d;
-  border-top: 1px solid #404040;
-}
-.footer-text {
-  margin: 0;
-  font-size: 1rem;
-  color: #cccccc;
-  font-weight: 500;
-}
-
-/* Empty State */
-.empty-state {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.empty-text {
-  font-size: 1.2rem;
-  color: #888888;
-  font-style: italic;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    max-width: 100%;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .item-box {
-    padding: 0.75rem;
-  }
-
-  .label {
     font-size: 1rem;
   }
 
@@ -648,9 +890,18 @@ body {
     font-size: 1rem;
     align-self: center;
   }
+
+  .auth-box {
+    padding: 1.5rem;
+  }
+
+  .auth-title {
+    font-size: 2rem;
+  }
 }
 
-/* Focus Styles for Accessibility */
+/* ==================== ACCESSIBILITY ==================== */
+
 .checkbox:focus,
 .delete-button:focus,
 .edit-button:focus,
@@ -660,7 +911,8 @@ body {
   outline-offset: 2px;
 }
 
-/* Smooth Animations */
+/* ==================== ANIMATIONS ==================== */
+
 @media (prefers-reduced-motion: no-preference) {
   .item-box,
   .delete-button,
