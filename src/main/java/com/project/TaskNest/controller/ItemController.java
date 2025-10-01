@@ -1,7 +1,7 @@
-package com.project.todo_app.controller;
+package com.project.TaskNest.controller;
 
-import com.project.todo_app.model.Items;
-import com.project.todo_app.repo.ItemRepo;
+import com.project.TaskNest.model.Items;
+import com.project.TaskNest.repo.ItemRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

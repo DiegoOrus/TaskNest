@@ -1,6 +1,6 @@
-package com.project.todo_app.repo;
+package com.project.TaskNest.repo;
 
-import com.project.todo_app.model.Items;
+import com.project.TaskNest.model.Items;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

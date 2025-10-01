@@ -1,4 +1,4 @@
-package com.project.todo_app.model;
+package com.project.TaskNest.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
