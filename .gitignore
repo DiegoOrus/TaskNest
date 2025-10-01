@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # IDE files
 .idea/
 .vscode/
@@ -108,3 +109,16 @@ config/secrets/
 *.zip
 *.tar.gz
 *.rar
+=======
+# IntelliJ
+.idea/
+*.iml
+
+# Build
+/target/
+
+# Secrets
+application.properties
+application.yml
+.env
+>>>>>>> dc0ebfd629541b8f17a34cf31d01240100106ccb
